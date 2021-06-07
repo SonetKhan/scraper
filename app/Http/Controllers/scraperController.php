@@ -30,9 +30,10 @@ class scraperController extends Controller
 
               $item->filter('.video-block')->each(function($link){
 
-                $url = $link->filter('a')->attr('href')."<br>";
+                $url = $link->filter('a')->attr('href');
 
-                $title = $link->filter('.name')->text()."<br>";
+                $title = $link->filter('.name')->text();
+                $url ="https:".$url;
 
                 array_push($this->resultUrl,$url);
                 array_push($this->resultTitle,$title);
@@ -50,7 +51,7 @@ class scraperController extends Controller
                 }
             }
 
-            // print_r($this->assArray);
+            print_r($this->assArray);
 
             foreach($this->assArray as $key=>$value){
 
