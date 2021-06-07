@@ -62,7 +62,7 @@ class scraperController extends Controller
                ]);
 
             }
-            ($result)?"Data add successful":"Data add not successful";
+           return  ($result)?"Data add successful":"Data add not successful";
 
            
 
